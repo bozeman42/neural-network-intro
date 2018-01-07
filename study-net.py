@@ -23,10 +23,12 @@ class Neural_Network(object):
     return o
   def sigmoid(self,s):
     return 1/(1+np.exp(-s))
+  def sigmoidPrime(self, s):
+    return s * (1 - s)
 
-  NN = Neural_Network()
+NN = Neural_Network()
 
-  o  = NN.forward(X)
+o  = NN.forward(X)
 
-  print("Predicted Output: " + str(o))
-  print("Actual Output: " + str(y))
+print("Predicted Output: " + str(o))
+print("Actual Output: " + str(y))
